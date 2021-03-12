@@ -1,5 +1,5 @@
 # Test Tracker
 ---
 ## Screenshot
-![Mockup image.](/Mockups/MockupGraphiAni.png)
+![Mockup image.](/Mockups/MockupTestTracker.png)
 ---
