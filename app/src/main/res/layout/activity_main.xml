@@ -15,36 +15,38 @@
         android:background="@color/purple_500"
         >
 
-        <TextView
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/logo" />
+
+
+        <Button
+            android:id="@+id/loginBtn"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="100dp"
-            android:text="Test Tracker"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="50sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:text="Keep Track of Various Tests"
-            android:textAlignment="center"
-            android:textColor="@color/white"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/white"
+            android:text="LOGIN"
+            android:textColor="@color/purple_500"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
+            android:id="@+id/registerBtn"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
             android:backgroundTint="@color/white"
-            android:text="LOGIN"
-            android:textSize="20sp"
+            android:text="REGISTER"
             android:textColor="@color/purple_500"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
 
