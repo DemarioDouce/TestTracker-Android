@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DemarioDouce_COMP304Sec003_Lab4_Ex1">
-        <activity android:name=".MainActivity" android:label="Test Tracker">
+        <activity android:name=".NurseLoginActivity" android:label="Login" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".NurseRegisterActivity" android:label="Register" android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="Test Tracker">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

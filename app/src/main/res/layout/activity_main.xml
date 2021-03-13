@@ -32,6 +32,7 @@
             android:layout_marginRight="20dp"
             android:backgroundTint="@color/white"
             android:text="LOGIN"
+            android:onClick="openNurseLogin"
             android:textColor="@color/purple_500"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -45,6 +46,7 @@
             android:layout_marginRight="20dp"
             android:backgroundTint="@color/white"
             android:text="REGISTER"
+            android:onClick="openNurseRegister"
             android:textColor="@color/purple_500"
             android:textSize="20sp"
             android:textStyle="bold" />
