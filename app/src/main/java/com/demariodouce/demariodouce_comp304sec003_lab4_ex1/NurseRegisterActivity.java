@@ -20,6 +20,7 @@ public class NurseRegisterActivity extends AppCompatActivity {
     NurseEntity nurseEntity;
 
     //UI variables
+    private EditText nurseId;
     private EditText firstName;
     private EditText lastName;
     private EditText department;
@@ -48,11 +49,13 @@ public class NurseRegisterActivity extends AppCompatActivity {
 
     public void nurseRegister(View view) {
         //UI variables
+        nurseId = findViewById(R.id.nurseIdEtt);
         firstName = findViewById(R.id.firstNameEtt);
         lastName = findViewById(R.id.lastNameEtt);
         department = findViewById(R.id.departmentEtt);
         password = findViewById(R.id.passwordEtt);
         //
+        nurseEntity.setNurseId(Integer.parseInt(nurseId.getText().toString()));
         nurseEntity.setFirstName(firstName.getText().toString());
         nurseEntity.setLastName(lastName.getText().toString());
         nurseEntity.setDepartment(department.getText().toString());

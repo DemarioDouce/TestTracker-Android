@@ -28,7 +28,7 @@ public class NurseRepository {
     public LiveData<List<NurseEntity>> getAllNurses() {
         return nurseList;
     }
-    //inserts a person asynchronously
+    //inserts a nurse asynchronously
     public void insert(NurseEntity nurseEntity) {
         insertAsync(nurseEntity);
     }

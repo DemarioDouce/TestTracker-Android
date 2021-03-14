@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey;
 @Entity
 public class NurseEntity {
 
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey()
     private int nurseId;
     private String firstName;
     private String lastName;
