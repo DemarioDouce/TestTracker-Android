@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DemarioDouce_COMP304Sec003_Lab4_Ex1">
-        <activity android:name=".NurseRegisterActivity"
+        <activity android:name=".PatientActivity" android:label="Patient" android:parentActivityName=".NurseLoginActivity"></activity>
+        <activity
+            android:name=".NurseRegisterActivity"
             android:label="Register"
-            android:parentActivityName=".MainActivity"
-            ></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".NurseLoginActivity"
             android:label="Login"

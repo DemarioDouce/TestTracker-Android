@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -41,16 +42,19 @@ public class NurseLoginActivity extends AppCompatActivity {
         nurseId = findViewById(R.id.nurseIdEtt);
         password = findViewById(R.id.passwordEtt);
 
+        Intent intent = new Intent(this, PatientActivity.class);
+
         nurseViewModel.checkValidLogin(Integer.parseInt(nurseId.getText().toString().trim()), password.getText().toString().trim()).observe(this, new Observer<NurseEntity>() {
             @Override
             public void onChanged(NurseEntity nurseEntity) {
                 if (nurseEntity != null) {
 
                     Toast.makeText(getBaseContext(), "Successfully Logged In.", Toast.LENGTH_LONG).show();
-                    Log.i("Successful_Login", "Login was successful");
+                    intent.putExtra("nurseId", nurseId.getText().toString().trim());
+                    startActivity(intent);
                 } else {
                     Toast.makeText(getBaseContext(), "Invalid Login.", Toast.LENGTH_SHORT).show();
-                    Log.i("Unsuccessful_Login", "Login was not successful");
+
                 }
 
             }
