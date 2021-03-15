@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DemarioDouce_COMP304Sec003_Lab4_Ex1">
-        <activity android:name=".PatientUpdateActivity" android:label="Update Patient Information" android:parentActivityName=".PatientInfoActivity"></activity>
+        <activity android:name=".TestActivity" android:label="Test Information" android:parentActivityName=".PatientActivity"></activity>
+        <activity
+            android:name=".PatientUpdateActivity"
+            android:label="Update Patient Information"
+            android:parentActivityName=".PatientActivity" />
         <activity
             android:name=".PatientInfoActivity"
             android:label="Patient Information"

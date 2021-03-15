@@ -82,7 +82,7 @@ Intent intent3;
 
             intent3 = new Intent(PatientUpdateActivity.this, PatientActivity.class);
 
-            Toast.makeText(PatientUpdateActivity.this, "Patient successfully saved", Toast.LENGTH_SHORT).show();
+            Toast.makeText(PatientUpdateActivity.this, "Patient successfully updated.", Toast.LENGTH_SHORT).show();
             startActivity(intent3);
         } catch (Exception e) {
             Toast.makeText(PatientUpdateActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();

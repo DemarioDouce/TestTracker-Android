@@ -110,5 +110,10 @@ public class PatientActivity extends AppCompatActivity {
         patientEntity.setDepartment(department.getText().toString().trim());
         patientEntity.setRoom(room.getText().toString().trim());
         patientViewModel.insert(patientEntity);
+        //
+        firstName.setText("");
+        lastName.setText("");
+        department.setText("");
+        room.setText("");
     }
 }
