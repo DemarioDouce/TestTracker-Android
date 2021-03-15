@@ -2,11 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PatientActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".PatientUpdateActivity"
+    android:background="@color/purple_500">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,62 +26,58 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_margin="20dp"
-                android:text="Enter Patient Information"
+                android:text="Update Patient Information"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/firstNameEtt"
+                android:id="@+id/firstNameUpdateEtt"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/white"
-                android:hint="First name"
                 android:padding="10dp"
                 android:textColor="@color/purple_500"
                 android:textColorHint="@color/purple_500"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/lastNameEtt"
+                android:id="@+id/lastNameUpdateEtt"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/white"
-                android:hint="Last name"
                 android:padding="10dp"
                 android:textColor="@color/purple_500"
                 android:textColorHint="@color/purple_500"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/departmentEtt"
+                android:id="@+id/departmentUpdateEtt"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/white"
-                android:hint="Department"
                 android:padding="10dp"
                 android:textColor="@color/purple_500"
                 android:textColorHint="@color/purple_500"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/roomEtt"
+                android:id="@+id/roomUpdateEtt"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/white"
-                android:hint="room"
                 android:padding="10dp"
                 android:textColor="@color/purple_500"
                 android:textColorHint="@color/purple_500"
@@ -95,27 +91,12 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:backgroundTint="@color/white"
-                android:onClick="patientRegister"
-                android:text="REGISTER"
+                android:onClick="patientUpdate"
+                android:text="UPDATE"
                 android:textColor="@color/purple_500"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="752dp"
-        tools:layout_editor_absoluteY="710dp"
->
 
-    <ListView
-        android:id="@+id/listview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:divider="@color/purple_500"
-        android:dividerHeight="5dp"
-        android:padding="10dp"/>
-</LinearLayout>
 </LinearLayout>

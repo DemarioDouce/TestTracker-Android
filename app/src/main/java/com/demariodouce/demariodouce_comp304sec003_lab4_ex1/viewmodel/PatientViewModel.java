@@ -39,4 +39,21 @@ public class PatientViewModel extends AndroidViewModel {
     public LiveData<List<PatientEntity>> getAllPatients() {
         return allPatients;
     }
+
+    //find patient by ID
+    public  LiveData<PatientEntity>  findById(int id)
+    {
+        return  patientRepository.loadPatient ( id );
+    }
+//Delete
+public void delete(PatientEntity patientEntity)
+{
+    patientRepository.delete (patientEntity);
 }
+    //
+    public void update(PatientEntity patient)
+    {
+        patientRepository.update (patient);
+    }
+}
+

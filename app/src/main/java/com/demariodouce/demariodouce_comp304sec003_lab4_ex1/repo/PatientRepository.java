@@ -1,6 +1,7 @@
 package com.demariodouce.demariodouce_comp304sec003_lab4_ex1.repo;
 
 import android.content.Context;
+import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -37,6 +38,36 @@ public class PatientRepository {
     public LiveData<Integer> getInsertResult() {
         return insertResult;
     }
+    //Load patient by ID
+    public LiveData<PatientEntity> loadPatient(final int patientId) {
+        return patientDao.loadPatient (patientId);
+    }
+    //
+    public void update(PatientEntity patientEntity) {
+        new updateAsyncTask(patientDao).execute(patientEntity);
+
+    }
+
+    private static class updateAsyncTask extends AsyncTask<PatientEntity, Void, Void> {
+
+        private PatientDao uAsyncTaskDao;
+
+        updateAsyncTask(PatientDao dao) {
+            uAsyncTaskDao = dao;
+        }
+
+
+        protected Void doInBackground(final PatientEntity... params) {
+            uAsyncTaskDao.updatePatient (params[0]);
+            return null;
+        }
+    }
+//Delete
+public void delete(PatientEntity patientEntity) {
+    new deleteAsyncTask(patientDao).execute(patientEntity);
+
+}
+
 
     private void insertAsync(final PatientEntity patientEntity) {
 
@@ -51,5 +82,20 @@ public class PatientRepository {
                 }
             }
         }).start();
+    }
+
+    private static class deleteAsyncTask extends AsyncTask<PatientEntity, Void, Void> {
+
+        private PatientDao dAsyncTaskDao;
+
+        deleteAsyncTask(PatientDao dao) {
+            dAsyncTaskDao = dao;
+        }
+
+        protected Void doInBackground(final PatientEntity... params) {
+            dAsyncTaskDao.deletePatient (params[0]);
+            return null;
+        }
+
     }
 }

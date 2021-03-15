@@ -26,4 +26,7 @@ public interface PatientDao {
 
     @Delete
     void deletePatient(PatientEntity patientEntity);
+
+    @Query("select * from PatientEntity where patientId = :id")
+    LiveData<PatientEntity> loadPatient(int id);
 }

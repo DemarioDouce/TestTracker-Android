@@ -7,8 +7,10 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -68,6 +70,22 @@ public class PatientActivity extends AppCompatActivity {
             }
         });
 
+        listView.setOnItemClickListener (new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+                Intent intent;
+
+                intent = new Intent(view.getContext(), PatientInfoActivity.class);
+                Object current = listView.getItemAtPosition(position);
+                int currentId = ((PatientEntity)current).getPatientId ();
+                Bundle bundle = new Bundle();
+                bundle.putInt ( "id",currentId  );
+                intent.putExtras (  bundle  );
+                startActivity(intent);
+            }
+
+        });
     }
 
     public void patientRegister(View view) {
