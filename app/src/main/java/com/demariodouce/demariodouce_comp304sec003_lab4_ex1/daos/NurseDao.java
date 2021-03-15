@@ -19,4 +19,7 @@ public interface NurseDao {
     //Monitoring Query Result Changes with Live Data
     @Query("select * from NurseEntity order by firstName")
     LiveData<List<NurseEntity>> getAllNurses();
+    //Login
+    @Query("SELECT * FROM NurseEntity where NurseEntity.nurseId= :nurseId and NurseEntity.password= :password")
+    LiveData<NurseEntity>  getNurse(int nurseId, String password);
 }

@@ -6,4 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".NurseLoginActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="752dp"
+            tools:layout_editor_absoluteY="710dp"
+            android:background="@color/purple_500"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Login"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_margin="20dp"/>
+
+            <EditText
+                android:id="@+id/nurseIdEtt"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/purple_500"
+                android:background="@color/white"
+                android:hint="Nurse ID"
+                android:inputType="number"
+                android:textColorHint="@color/purple_500"
+                android:padding="10dp"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/passwordEtt"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/purple_500"
+                android:background="@color/white"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/purple_500"
+                android:padding="10dp"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/registerBtn"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/white"
+                android:text="LOGIN"
+                android:onClick="nurseLogin"
+                android:textColor="@color/purple_500"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

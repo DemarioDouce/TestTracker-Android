@@ -28,6 +28,13 @@ public class NurseRepository {
     public LiveData<List<NurseEntity>> getAllNurses() {
         return nurseList;
     }
+    //Login
+    public LiveData<NurseEntity> isValidAccount(int nurseId, String password)
+    {
+
+return nurseDao.getNurse (nurseId,password);
+
+    }
     //inserts a nurse asynchronously
     public void insert(NurseEntity nurseEntity) {
         insertAsync(nurseEntity);

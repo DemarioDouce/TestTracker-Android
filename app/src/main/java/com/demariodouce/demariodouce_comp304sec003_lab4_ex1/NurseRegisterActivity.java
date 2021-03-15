@@ -55,11 +55,11 @@ public class NurseRegisterActivity extends AppCompatActivity {
         department = findViewById(R.id.departmentEtt);
         password = findViewById(R.id.passwordEtt);
         //
-        nurseEntity.setNurseId(Integer.parseInt(nurseId.getText().toString()));
-        nurseEntity.setFirstName(firstName.getText().toString());
-        nurseEntity.setLastName(lastName.getText().toString());
-        nurseEntity.setDepartment(department.getText().toString());
-        nurseEntity.setPassword(password.getText().toString());
+        nurseEntity.setNurseId(Integer.parseInt(nurseId.getText().toString().trim()));
+        nurseEntity.setFirstName(firstName.getText().toString().trim());
+        nurseEntity.setLastName(lastName.getText().toString().trim());
+        nurseEntity.setDepartment(department.getText().toString().trim());
+        nurseEntity.setPassword(password.getText().toString().trim());
         nurseViewModel.insert(nurseEntity);
     }
 }

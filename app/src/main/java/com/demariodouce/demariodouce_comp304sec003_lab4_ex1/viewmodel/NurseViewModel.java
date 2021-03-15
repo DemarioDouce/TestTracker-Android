@@ -25,6 +25,11 @@ public class NurseViewModel extends AndroidViewModel {
         insertResult = nurseRepository.getInsertResult();
         allNurses = nurseRepository.getAllNurses();
     }
+    //
+    public LiveData<NurseEntity> checkValidLogin(int userId, String password)
+    {
+        return nurseRepository.isValidAccount(userId, password);
+    }
 
     //calls repository to insert a nurse
     public void insert(NurseEntity nurseEntity) {
